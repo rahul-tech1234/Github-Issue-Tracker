@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Github-Issue-Tracker</title>
+        <!-- Tailwind and Daisy UI -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- Google Font Family and CDN link  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="card card-body shadow-2xl">
+            <button class="btn btn-xs px-6">All</button>
+            <div id="tab-container">
+                
+            </div>
+        </div>
+
+
+
+
+        <div
+            class="log-page w-[400px] mx-auto mt-[8rem] shadow-md rounded-lg p-2 mb-4"
+        >
+            <form action="" class="p-8 space-y-2">
+                <legend class="text-center">
+                    <i class="fa-brands fa-github text-[50px] text-center"></i>
+                </legend>
+                <h2 class="text-center text-2xl color-[#000] font-semibold">
+                    GitHub Issues Tracker
+                </h2>
+                <p class="text-center text-[#64748B] text-[16px] font-medium">
+                    Sign in to manage your issues
+                </p>
+                <label
+                    for="user-name"
+                    class="text-16px font-medium text--[#000]"
+                    >Username</label
+                ><br />
+                <input
+                    type="text"
+                    name="name"
+                    id="user-name"
+                    placeholder="Enter Username"
+                    class="w-[100%] block rounded-lg p-2 border border-[#ddd] shadow-md"
+                />
+                <p class="text-[#4A00FF] text-14 font-normal">Default: admin</p>
+                <label for="password" class="text-16px font-medium text--[#000]"
+                    >Password</label
+                >
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter Password"
+                    class="w-[100%] rounded-lg p-2 border border-[#ddd] shadow-md"
+                />
+                <p class="text-[#4A00FF] text-14 font-normal">
+                    Default: admin123
+                </p>
+                <button
+                    id="login-btn"
+                    class="btn btn-primary w-[100%] mx-auto"
+                    onclick="getUserValue()"
+                >
+                    Sign In
+                </button>
+            </form>
+        </div>
+        <script src="login.js"></script>
+    </body>
+</html>
